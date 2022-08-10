@@ -5,7 +5,7 @@ const DisplayShop = () => {
     return (
         <>
             <DisplayHeader />
-            <div>Shoppage</div>
+            <div>Shop page</div>
         </>
     )
 }

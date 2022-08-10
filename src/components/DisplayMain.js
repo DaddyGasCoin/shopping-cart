@@ -1,9 +1,10 @@
 import DisplayHeader from "./DisplayHeader"
+
 const DisplayMain = () => {
     return (
         <>
             <DisplayHeader />
-            <div>Shoppage</div>
+            <div>Main Page</div>
         </>
     )
 }

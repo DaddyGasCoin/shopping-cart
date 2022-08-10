@@ -1,15 +1,20 @@
+import { Link } from "react-router-dom";
 
 
 const DisplayHeader = () => {
-    return (
-        <div className="head-wrapper">
-            <div>SHOP NAME</div>
-            <div className="head-right">
-                <div>SHOP</div>
-                <div>cart</div>
-            </div>
-        </div>
-    )
+  return (
+    <div className="head-wrapper">
+      <Link to="/">
+        <div>SHOP NAME</div>
+      </Link>
+      <div className="head-right">
+        <Link to="/shop">
+          <div>SHOP</div>
+        </Link>
+        <div>cart</div>
+      </div>
+    </div>
+  )
 }
 
 export default DisplayHeader
