@@ -1,9 +1,10 @@
-
+import DisplayMain from "./components/DisplayMain";
+import DisplayShop from "./components/DisplayShop";
 function App() {
   return (
-    <div>
-      hello
-    </div>
+    <>
+      <DisplayShop />
+    </>
   );
 }
 
