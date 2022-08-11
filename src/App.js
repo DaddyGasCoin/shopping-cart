@@ -20,7 +20,7 @@ let productname = []
 String.prototype.toProperCase = function () {
   return this.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
 };
-//format product name
+//format product names
 keys.forEach(key => {
   let result = key.replaceAll("-", " ");
   result = result.slice(0, -4)
@@ -31,17 +31,24 @@ keys.forEach(key => {
 //state array for products
 let arr = []
 keys.forEach((key, index) =>
-  arr.push({ id: uniqid(), link: images[key], name: productname[index] }))
+  arr.push({ id: uniqid(), link: images[key], name: productname[index], price: 150 }))
 
 function App() {
 
   const [products] = useState(arr)
+  const [cost, setCost] = useState(0)
+
+  function updateCost(event) {
+    const price = parseInt(event.target.dataset.price)
+    setCost(cost + price)
+    console.log(cost)
+  }
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<DisplayHeader />}>
           <Route path="/" element={<DisplayMain />} />
-          <Route path="shop" element={<DisplayShop items={products} />} />
+          <Route path="shop" element={<DisplayShop items={products} handler={updateCost} />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -38,3 +38,7 @@ img {
     flex-direction: column;
 
 }
+
+button {
+    width: 50%;
+}

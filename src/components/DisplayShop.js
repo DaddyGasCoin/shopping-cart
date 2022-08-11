@@ -1,7 +1,7 @@
 import DisplayCard from "./DisplayCard"
 
 const DisplayShop = (props) => {
-    const { items } = props
+    const { items, handler } = props
     return (
         <div className="shop-wrapper">
             <div className="navbar">
@@ -10,8 +10,8 @@ const DisplayShop = (props) => {
                 <div className="nav-items"> item 3</div>
             </div>
             <div className="shop-content">
-                {props.items.map((item) => {
-                    return <DisplayCard prod={item} />
+                {items.map((item) => {
+                    return <DisplayCard prod={item} handler={handler} key={item.id} />
                 })}
             </div>
         </div>
