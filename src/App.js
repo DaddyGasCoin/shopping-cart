@@ -15,10 +15,16 @@ function importAll(r) {
 const images = importAll(require.context('./components/images/shoes', false, /\.jpg/));
 const keys = Object.keys(images);
 let productname = []
+
+//convert to title case
+String.prototype.toProperCase = function () {
+  return this.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+};
 //format product name
 keys.forEach(key => {
   let result = key.replaceAll("-", " ");
   result = result.slice(0, -4)
+  result = result.toProperCase()
   productname.push(result)
 });
 
@@ -27,11 +33,9 @@ let arr = []
 keys.forEach((key, index) =>
   arr.push({ id: uniqid(), link: images[key], name: productname[index] }))
 
-
-
 function App() {
 
-  const [products] = useState([arr])
+  const [products] = useState(arr)
   return (
     <BrowserRouter>
       <Routes>
@@ -41,8 +45,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-
-  );
+  )
 }
 
 export default App;

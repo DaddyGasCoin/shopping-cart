@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .head-wrapper {
@@ -13,4 +14,27 @@
 .head-right {
     display: flex;
     gap: 10px;
+}
+
+.shop-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* gap: 0px; */
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+
 }
