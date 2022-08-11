@@ -1,19 +1,23 @@
-import { Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 
 const DisplayHeader = () => {
   return (
-    <div className="head-wrapper">
-      <Link to="/">
-        <div>SHOP NAME</div>
-      </Link>
-      <div className="head-right">
-        <Link to="/shop">
-          <div>SHOP</div>
+    <>
+      <div className="head-wrapper">
+        <Link to="/">
+          <div>SHOP NAME</div>
         </Link>
-        <div>cart</div>
+        <div className="head-right">
+          <Link to="/shop">
+            <div>SHOP</div>
+          </Link>
+          <div>cart</div>
+        </div>
       </div>
-    </div>
+      <Outlet />
+    </>
+
   )
 }
 
