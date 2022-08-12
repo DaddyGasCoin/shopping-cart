@@ -12,7 +12,9 @@ const DisplayHeader = () => {
           <Link to="/shop">
             <div>SHOP</div>
           </Link>
-          <div>cart</div>
+          <Link to='/cart'>
+            <div>cart</div>
+          </Link>
         </div>
       </div>
       <Outlet />

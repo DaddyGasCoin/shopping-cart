@@ -1,6 +1,7 @@
 import DisplayMain from "./components/DisplayMain";
 import DisplayShop from "./components/DisplayShop";
 import DisplayHeader from "./components/DisplayHeader";
+import DisplayCart from "./components/DisplayCart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import uniqid from "uniqid";
@@ -30,18 +31,41 @@ keys.forEach(key => {
 
 //state array for products
 let arr = []
+
+function randprice() {
+  const prices = [150, 200, 80, 650, 120, 275, 320]
+  return prices[Math.floor(Math.random() * prices.length)]
+}
 keys.forEach((key, index) =>
-  arr.push({ id: uniqid(), link: images[key], name: productname[index], price: 150 }))
+  arr.push({ id: uniqid(), link: images[key], name: productname[index], price: randprice() }))
 
 function App() {
 
   const [products] = useState(arr)
   const [cost, setCost] = useState(0)
+  const [cart, addCart] = useState([])
+
 
   function updateCost(event) {
     const price = parseInt(event.target.dataset.price)
+    const id = event.target.dataset.id
+    const img = event.target.dataset.src
+    const name = event.target.dataset.name
+    const index = cart.map(e => e.id).indexOf(id);
+
+    //Increment quantity if product is already added
+    if (index === -1) {
+      cart.push({ id: id, link: img, name: name, price: price, qty: 1 })
+      addCart([...cart])
+    }
+    else {
+      let temporaryarray = cart.slice();
+      temporaryarray[index].qty += 1
+      addCart(temporaryarray);
+    }
+
+    addCart([...cart])
     setCost(cost + price)
-    console.log(cost)
   }
   return (
     <BrowserRouter>
@@ -49,6 +73,7 @@ function App() {
         <Route path="/" element={<DisplayHeader />}>
           <Route path="/" element={<DisplayMain />} />
           <Route path="shop" element={<DisplayShop items={products} handler={updateCost} />} />
+          <Route path="cart" element={<DisplayCart data={cart} price={cost} />} />
         </Route>
       </Routes>
     </BrowserRouter>
