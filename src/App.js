@@ -67,13 +67,46 @@ function App() {
     addCart([...cart])
     setCost(cost + price)
   }
+
+  function updateQuant(id, bool) {
+    const index = cart.map(e => e.id).indexOf(id);
+    let temporaryarray = cart.slice();
+    //increment quantity
+    if (bool) {
+      temporaryarray[index].qty += 1
+      addCart(temporaryarray);
+      const price = temporaryarray[index].price
+      setCost(cost + price)
+    }
+
+    //decrement quantity
+    else {
+      const qty = temporaryarray[index].qty
+      //remove from cart if qant is 0
+      if (qty <= 1) {
+        const price = temporaryarray[index].price
+        setCost(cost - price)
+        temporaryarray.splice(index, 1)
+        addCart(temporaryarray);
+      }
+      else {
+        temporaryarray[index].qty -= 1
+        addCart(temporaryarray);
+        const price = temporaryarray[index].price
+        setCost(cost - price)
+      }
+
+    }
+
+  }
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<DisplayHeader />}>
           <Route path="/" element={<DisplayMain />} />
           <Route path="shop" element={<DisplayShop items={products} handler={updateCost} />} />
-          <Route path="cart" element={<DisplayCart data={cart} price={cost} />} />
+          <Route path="cart" element={<DisplayCart data={cart} price={cost} handler={updateQuant} />} />
         </Route>
       </Routes>
     </BrowserRouter>
