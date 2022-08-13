@@ -29,7 +29,14 @@
 
 .shop-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 3%;
+    padding-bottom: 5%;
+
 }
 
 img {
@@ -40,6 +47,9 @@ img {
 .product-card {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
 
 }
 
@@ -115,14 +125,21 @@ button {
         'opsz' 48
 }
 
-.quant-btn {
+.quant-btn,
+.add-cart {
     width: max-content;
     background-color: #ffffff;
     border-radius: 0;
 }
 
+.add-cart {
+    padding: 1.2% 1.8%;
+    font-size: 1.2rem;
+}
+
 .checkout-btn:hover,
-.quant-btn:hover {
+.quant-btn:hover,
+.add-cart:hover {
     filter: invert(87%) sepia(83%) saturate(0%) hue-rotate(271deg) brightness(103%) contrast(102%);
 }
 
@@ -133,4 +150,23 @@ button {
     background-color: #ffffff;
     font-size: .9rem;
     font-weight: 600;
+}
+
+.navbar {
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+}
+
+.nav-items {
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 1px solid #33332d;
+    padding: 10px 20px;
+    transition: box-shadow 300ms ease-in-out;
+}
+
+.nav-items:hover {
+    box-shadow: 8px 5px #33332d;
 }
