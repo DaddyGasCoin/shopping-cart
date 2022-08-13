@@ -9,7 +9,10 @@ const DisplayCart = (props) => {
                     return <DisplayProduct key={item.id} data={item} handler={handler} />
                 })}
             </div>
-            <div className="cart-foot">TOTAL ORDER = {price} </div>
+            <div className="cart-foot">
+                <p>TOTAL: {price} </p>
+                <button className="checkout-btn">CHECKOUT</button>
+            </div>
         </>
     )
 }

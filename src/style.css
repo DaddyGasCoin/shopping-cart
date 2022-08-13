@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .head-wrapper {
@@ -25,7 +30,6 @@
 .shop-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* gap: 0px; */
 }
 
 img {
@@ -49,16 +53,84 @@ button {
     padding: 10px;
     width: 100%;
     background-color: black;
-    color: aliceblue;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .3em;
+    opacity: .8;
 
 }
 
 .cart-wrapper {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 50px;
 
 }
 
 .cart-product-display {
     display: flex;
+    justify-content: center;
+    gap: 10%;
+    width: max-content;
+    border: 1px solid black;
+    padding: 1% 2%;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8%;
+    width: 200px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.cart-img {
+    height: 250px;
+    width: 250px;
+}
+
+.quant-wrapper {
+    display: flex;
+    gap: 5%;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.quant-btn {
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 0;
+}
+
+.checkout-btn:hover,
+.quant-btn:hover {
+    filter: invert(87%) sepia(83%) saturate(0%) hue-rotate(271deg) brightness(103%) contrast(102%);
+}
+
+.checkout-btn {
+    width: max-content;
+    padding: .9%;
+    border: none;
+    background-color: #ffffff;
+    font-size: .9rem;
+    font-weight: 600;
 }

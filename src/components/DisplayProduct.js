@@ -5,11 +5,22 @@ const DisplayProduct = (props) => {
         <div className="cart-product-display">
             <img className="cart-img" src={data.link} />
             <div className="product-info">
-                <div> name {data.name}</div>
-                <div> price {data.price}</div>
-                <div> quantity {data.qty}</div>
-                <button onClick={() => handler(data.id, true)}>ADD</button>
-                <button onClick={() => handler(data.id, false)}>Remove</button>
+                <div>{data.name}</div>
+                <div>{data.price * data.qty} USD </div>
+                <div className="quant-wrapper">
+                    <button className="quant-btn add">
+                        <span class="material-symbols-outlined" onClick={() => handler(data.id, true)}>
+                            add
+                        </span>
+                    </button>
+                    <div>{data.qty}</div>
+                    <button className="quant-btn minus">
+                        <span class="material-symbols-outlined" onClick={() => handler(data.id, false)}>
+                            remove
+                        </span>
+                    </button>
+                </div>
+
             </div>
         </div>
     )
