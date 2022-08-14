@@ -226,3 +226,15 @@ span.size-35 {
     padding: 10px 20px;
     box-shadow: 7px 10px black, 8px 10px black;
 }
+
+.notify {
+    position: fixed;
+    border: 2px solid black;
+    padding: 1% 2%;
+    background-color: #22c55e;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    box-shadow: 7px 10px black;
+    opacity: .8;
+}

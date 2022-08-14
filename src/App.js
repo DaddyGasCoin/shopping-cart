@@ -44,7 +44,7 @@ function App() {
   const [products] = useState(arr)
   const [cost, setCost] = useState(0)
   const [cart, addCart] = useState([])
-
+  const [test, setTest] = useState(false)
 
   function updateCost(event) {
     const price = parseInt(event.target.dataset.price)
@@ -52,6 +52,10 @@ function App() {
     const img = event.target.dataset.src
     const name = event.target.dataset.name
     const index = cart.map(e => e.id).indexOf(id);
+    setTest(name)
+    setTimeout(() => {
+      setTest(false)
+    }, 1000);
 
     //Increment quantity if product is already added
     if (index === -1) {
@@ -105,7 +109,7 @@ function App() {
       <Routes>
         <Route path="/" element={<DisplayHeader />}>
           <Route path="/" element={<DisplayMain />} />
-          <Route path="shop" element={<DisplayShop items={products} handler={updateCost} />} />
+          <Route path="shop" element={<DisplayShop items={products} handler={updateCost} test={test} />} />
           <Route path="cart" element={<DisplayCart data={cart} price={cost} handler={updateQuant} />} />
         </Route>
       </Routes>

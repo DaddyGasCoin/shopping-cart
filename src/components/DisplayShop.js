@@ -1,7 +1,7 @@
 import DisplayCard from "./DisplayCard"
 
 const DisplayShop = (props) => {
-    const { items, handler } = props
+    const { items, handler, test } = props
     return (
         <div className="shop-wrapper">
             <div className="navbar">
@@ -14,6 +14,8 @@ const DisplayShop = (props) => {
                     return <DisplayCard prod={item} handler={handler} key={item.id} />
                 })}
             </div>
+            {test ? <span className="notify">Added {test} to cart</span> : null}
+
         </div>
     )
 }
