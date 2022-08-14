@@ -105,7 +105,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/shopping-cart">
       <Routes>
         <Route path="/" element={<DisplayHeader />}>
           <Route path="/" element={<DisplayMain />} />
