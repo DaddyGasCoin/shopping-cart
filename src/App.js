@@ -105,7 +105,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<DisplayHeader />}>
           <Route path="/" element={<DisplayMain />} />
