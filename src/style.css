@@ -211,3 +211,18 @@ span.size-35 {
     background-color: black;
 
 }
+
+.main-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-link {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 7px 10px black, 8px 10px black;
+}
