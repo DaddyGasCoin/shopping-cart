@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800;900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 * {
     margin: 0;
@@ -160,6 +160,11 @@ span.size-35 {
     padding-top: 5px;
 }
 
+span.size-55 {
+    font-size: 55px;
+    font-variation-settings: 'OPSZ' 0;
+}
+
 .quant-btn,
 .add-cart {
     width: max-content;
@@ -237,4 +242,21 @@ span.size-35 {
     font-weight: 600;
     box-shadow: 7px 10px black;
     opacity: .8;
+}
+
+.empty-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.target {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
