@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.b00b4a55.css",
-    "main.js": "/shopping-cart/static/js/main.ba6935da.js",
+    "main.js": "/shopping-cart/static/js/main.10a84b43.js",
     "static/media/multi.jpg": "/shopping-cart/static/media/multi.817fd5c518eedb70d754.jpg",
     "static/media/air-max-flyknit-racer.jpg": "/shopping-cart/static/media/air-max-flyknit-racer.e6a1198d0232da38457b.jpg",
     "static/media/zoomx-invincible-run-flyknit-2.jpg": "/shopping-cart/static/media/zoomx-invincible-run-flyknit-2.939989cb95f66fbcad30.jpg",
@@ -17,10 +17,10 @@
     "static/media/air-vapormax-plus.jpg": "/shopping-cart/static/media/air-vapormax-plus.ceccb2bfe0ebd01f9ea5.jpg",
     "index.html": "/shopping-cart/index.html",
     "main.b00b4a55.css.map": "/shopping-cart/static/css/main.b00b4a55.css.map",
-    "main.ba6935da.js.map": "/shopping-cart/static/js/main.ba6935da.js.map"
+    "main.10a84b43.js.map": "/shopping-cart/static/js/main.10a84b43.js.map"
   },
   "entrypoints": [
     "static/css/main.b00b4a55.css",
-    "static/js/main.ba6935da.js"
+    "static/js/main.10a84b43.js"
   ]
 }
