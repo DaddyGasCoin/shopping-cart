@@ -9,20 +9,20 @@ const DisplayProduct = (props) => {
                 <div>{data.price * data.qty} USD </div>
                 <div className="quant-wrapper">
                     <button className="quant-btn add">
-                        <span class="material-symbols-outlined" onClick={() => handler(data.id, true)}>
+                        <span className="material-symbols-outlined" onClick={() => handler(data.id, true)}>
                             add
                         </span>
                     </button>
                     <div>{data.qty}</div>
                     <button className="quant-btn minus">
-                        <span class="material-symbols-outlined" onClick={() => handler(data.id, false)}>
+                        <span className="material-symbols-outlined" onClick={() => handler(data.id, false)}>
                             remove
                         </span>
                     </button>
                 </div>
 
             </div>
-        </div>
+        </div >
     )
 }
 
