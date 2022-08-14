@@ -13,7 +13,7 @@ const DisplayHeader = () => {
             <div>SHOP</div>
           </Link>
           <Link className="text-link" to='/cart'>
-            <span className="material-symbols-outlined size-35">
+            <span className="material-symbols-sharp size-35">
               shopping_cart
             </span>
           </Link>
