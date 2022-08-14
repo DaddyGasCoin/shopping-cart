@@ -5,15 +5,17 @@ const DisplayHeader = () => {
   return (
     <>
       <div className="head-wrapper">
-        <Link to="/">
-          <div>SHOP NAME</div>
+        <Link className="text-link text" to="/">
+          <div className="head-left">SHOP NAME</div>
         </Link>
         <div className="head-right">
-          <Link to="/shop">
+          <Link className="text-link text" to="/shop">
             <div>SHOP</div>
           </Link>
-          <Link to='/cart'>
-            <div>cart</div>
+          <Link className="text-link" to='/cart'>
+            <span class="material-symbols-outlined size-35">
+              shopping_cart
+            </span>
           </Link>
         </div>
       </div>

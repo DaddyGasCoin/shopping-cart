@@ -9,16 +9,44 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    background-color: #f3f4f6;
+
+}
+
 .head-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    background-color: blueviolet;
+    background-color: #f3f4f6;
+    font-size: 1.6rem;
+    margin-top: .5%;
+    padding-left: 4.5%;
+
+
+}
+
+.text-link {
+    text-decoration: none;
+    color: black;
+
+}
+
+.text-link.text {
+    transition: box-shadow 250ms ease-in-out;
+}
+
+.text-link.text:hover {
+    box-shadow: inset 0px -8px #e5e5e5;
 }
 
 .head-right {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    padding-right: 1.8%;
 }
 
 .shop-wrapper {
@@ -36,6 +64,7 @@
     font-weight: 500;
     margin-top: 3%;
     padding-bottom: 5%;
+
 
 }
 
@@ -125,11 +154,18 @@ button {
         'opsz' 48
 }
 
+span.size-35 {
+    font-size: 35px;
+    font-variation-settings: 'OPSZ' 20;
+    padding-top: 5px;
+}
+
 .quant-btn,
 .add-cart {
     width: max-content;
-    background-color: #ffffff;
+    background-color: #f3f4f6;
     border-radius: 0;
+    border: solid 2px black;
 }
 
 .add-cart {
@@ -169,4 +205,9 @@ button {
 
 .nav-items:hover {
     box-shadow: 8px 5px #33332d;
+}
+
+.price {
+    background-color: black;
+
 }

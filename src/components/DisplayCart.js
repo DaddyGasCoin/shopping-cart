@@ -10,7 +10,7 @@ const DisplayCart = (props) => {
                 })}
             </div>
             <div className="cart-foot">
-                <p>TOTAL: {price} </p>
+                <p className="price">TOTAL: {price} </p>
                 <button className="checkout-btn">CHECKOUT</button>
             </div>
         </>
