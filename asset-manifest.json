@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.b00b4a55.css",
+    "main.js": "/shopping-cart/static/js/main.260cf726.js",
+    "static/media/multi.jpg": "/shopping-cart/static/media/multi.817fd5c518eedb70d754.jpg",
+    "static/media/air-max-flyknit-racer.jpg": "/shopping-cart/static/media/air-max-flyknit-racer.e6a1198d0232da38457b.jpg",
+    "static/media/zoomx-invincible-run-flyknit-2.jpg": "/shopping-cart/static/media/zoomx-invincible-run-flyknit-2.939989cb95f66fbcad30.jpg",
+    "static/media/air-zoom-pegasus-39.jpg": "/shopping-cart/static/media/air-zoom-pegasus-39.27e8d199f71ed968fead.jpg",
+    "static/media/air-more-uptempo-96.jpg": "/shopping-cart/static/media/air-more-uptempo-96.a04f7adbffe91fb1cdea.jpg",
+    "static/media/air-max-90.jpg": "/shopping-cart/static/media/air-max-90.ed67aea2a1dfeaa1d199.jpg",
+    "static/media/air-jordan-5-retro-green-bean.jpg": "/shopping-cart/static/media/air-jordan-5-retro-green-bean.acfb808ebb28f922e24a.jpg",
+    "static/media/air-force-1-mid-0.jpg": "/shopping-cart/static/media/air-force-1-mid-0.221f6f75c0f2df7fa96e.jpg",
+    "static/media/air-jordan-1-mid-se-craft.jpg": "/shopping-cart/static/media/air-jordan-1-mid-se-craft.a31d2439d63939386d75.jpg",
+    "static/media/blazer-mid-77-vintage.jpg": "/shopping-cart/static/media/blazer-mid-77-vintage.3f7836a8c2910148cd3e.jpg",
+    "static/media/air-jordan-6.jpg": "/shopping-cart/static/media/air-jordan-6.e19dde87e32de1344d06.jpg",
+    "static/media/air-force-1-07.jpg": "/shopping-cart/static/media/air-force-1-07.ce82cb15f2b112b769d5.jpg",
+    "static/media/air-vapormax-plus.jpg": "/shopping-cart/static/media/air-vapormax-plus.ceccb2bfe0ebd01f9ea5.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.b00b4a55.css.map": "/shopping-cart/static/css/main.b00b4a55.css.map",
+    "main.260cf726.js.map": "/shopping-cart/static/js/main.260cf726.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b00b4a55.css",
+    "static/js/main.260cf726.js"
+  ]
+}
